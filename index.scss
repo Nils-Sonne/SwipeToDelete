@@ -1,33 +1,46 @@
 body {
     margin: 0;
-}
-
-main {
+  }
+  
+  section {
+    box-sizing: border-box;
     display: grid;
-    grid-template-columns: 1fr 0.25fr;
+    grid-template-columns: 1fr 40%;
     grid-auto-rows: 75px;
-}
-
-main > * {
+  }
+  section > * {
     display: flex;
     align-items: center;
-}
-
-.jokeItem{
-
-    background-color: sandybrown;
+    padding: 5px;
+  }
+  section {
+    height: 75px;
+    display: grid;
+    grid-template-columns: 1fr 40%;
+    grid-auto-rows: 75px;
+    transition: height 0.25s ease;
+  }
+  .collapsed {
+    height: 0;
+  }
+  .jokeItem {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-    padding: 10px;
-}
-
-.deleteBtn {
-    color: green;
-    background-color: teal;
+    height: 100%;
+    background-color: rgb(160, 160, 216);
+    transition: 0.15s;
+  }
+  .deleteItem {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-}
+    background-color: rgb(50, 50, 154);
+    height: 100%;
+    justify-content: center;
+  }
+  .deleteItem i {
+    color: red;
+  } 
